@@ -12,12 +12,14 @@ public class Student extends Person {
 		// TODO Auto-generated constructor stub
 	}
 	
+	//Adds an additional println after stating occupation to affirm that the output is pretty.
 	@Override
 	public void whatDoYouDo() {
 		super.whatDoYouDo();
 		System.out.println();
 	}
 
+	//Asks questions in order from an array of questions passed in upon construction.
 	@Override
 	public void answerQuestion() {
 		String response = responses[responseNumber];
@@ -29,6 +31,7 @@ public class Student extends Person {
 		System.out.println(response);
 	}
 
+	//Asks responses in order from an array of responses passed in upon construction.
 	@Override
 	public void askQuestion() {
 		String question = questions[questionNumber];

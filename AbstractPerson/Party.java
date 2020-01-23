@@ -21,6 +21,8 @@ public class Party {
 	public Party() {
 		// Add your person objects here. The following are included as examples
 		people.add(new Teacher("Mr. Teacher", "Teacher", "Geometry"));
+		
+		// Arrays of responses and answers for the student and pet owner.
 		String[] studentResponses = {"I hate homework.", "I like pizza."};
 		String[] studentQuestions = {"What's for dinner?", "When's the big exam?", "Will you go to prom with me?"};
 		String[] petOwnerResponses = {"I love my pets!", "I only use purina.", "I'm going to walk my pet."};

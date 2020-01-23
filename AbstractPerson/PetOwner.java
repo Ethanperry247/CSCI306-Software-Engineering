@@ -20,12 +20,14 @@ public class PetOwner extends Person {
 		System.out.println(response);
 	}
 	
+	//Randomly chooses a question from an array of questions which is passed in upon construction.
 	@Override
 	public void askQuestion() {
 		int randInt = (int)(Math.random() * questions.length);
 		System.out.println(questions[randInt]);
 	}
 
+	//Randomly chooses a response from an array of responses which is passed in upon construction.
 	@Override
 	public void answerQuestion() {
 		int randInt = (int)(Math.random() * responses.length);
