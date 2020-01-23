@@ -1,9 +1,9 @@
 
 public class Burner {
 	private enum Temperature { BLAZING, HOT, WARM, COLD };
-	private Temperature myTemperature;
-	private Setting mySetting;
-	private int timer;
+	private Temperature myTemperature = Burner.Temperature.COLD;
+	private Setting mySetting = Setting.LOW;
+	private int timer = 0;
 	private static final int TIME_DURATION = 2;
 	
 	public Temperature getMyTemperature() {
@@ -44,13 +44,16 @@ public class Burner {
 		if (timer == 0) {
 			switch (mySetting) {
 			case HIGH:
-				myTemperature = Setting.LOW;
+				myTemperature = Burner.Temperature.BLAZING;
 				break;
 			case MEDIUM:
-				mySetting = Setting.LOW;
+				myTemperature = Burner.Temperature.HOT;
 				break;
 			case LOW:
-				mySetting = Setting.OFF;
+				myTemperature = Burner.Temperature.WARM;
+				break;
+			case OFF:
+				myTemperature = Burner.Temperature.COLD;
 				break;
 		}
 		} else {
