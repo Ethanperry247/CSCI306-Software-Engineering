@@ -1,0 +1,18 @@
+
+public class PetOwner extends Person {
+
+	public PetOwner(String name, String occupation) {
+		super(name, occupation);
+	}
+
+	@Override
+	public String askQuestion() {
+		return "What is your favorite class?";
+	}
+
+	@Override
+	public String answerQuestion() {
+		return "Get back to your homework!";
+	}
+
+}

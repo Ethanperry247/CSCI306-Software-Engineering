@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+/* 
+ * The Station class will maintain data related to one station, 
+ * specifically the name of the station (e.g., "Golden") and the 
+ * list of detectives.
+ */
+public class Station {
+	public final int MAX_DETECTIVES = 10;
+	public static int badgeNumber;
+	private Detective[] detectives;
+	
+	public static void main (String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		Station station = new Station();
+		
+		System.out.println("Please provide an officer name.");
+		String name = keyboard.next();
+		station.detectives = new Detective[1];
+		Detective temp = new Detective(name);
+		station.detectives[0] = new Detective(name);
+	}
+
+}

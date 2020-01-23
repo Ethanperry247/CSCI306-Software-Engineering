@@ -1,0 +1,7 @@
+Answers to part I questions:
+
+1. If you click revert, Eclipse will revert all changes after the last save.
+
+2. The person variable of type Friend is set to each Friend in the arraylist and then printed out to the console using the toString method we created.
+
+3. Instead of printing out the name and email as in the toString method, the println now simply prints out the memory location of the Friend object.

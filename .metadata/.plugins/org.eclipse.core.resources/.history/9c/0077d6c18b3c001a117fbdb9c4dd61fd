@@ -1,0 +1,16 @@
+
+public class Student extends Person {
+
+	@Override
+	public String askQuestion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String answerQuestion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
