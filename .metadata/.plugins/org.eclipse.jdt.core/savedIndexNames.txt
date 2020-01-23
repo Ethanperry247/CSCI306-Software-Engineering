@@ -1,9 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Edude\Documents\Mines Spring 2020\CSCI 306\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
-1596232268.index
-1487196307.index
-2814863825.index
-3470566167.index
-2448851988.index
-1164700669.index
-694605690.index
-4163338100.index
