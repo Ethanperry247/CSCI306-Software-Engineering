@@ -11,9 +11,15 @@ public class Student extends Person {
 		this.questions = questions;
 		// TODO Auto-generated constructor stub
 	}
+	
+	@Override
+	public void whatDoYouDo() {
+		super.whatDoYouDo();
+		System.out.println();
+	}
 
 	@Override
-	public void askQuestion() {
+	public void answerQuestion() {
 		String response = responses[responseNumber];
 		if (responseNumber < responses.length - 1) {
 			responseNumber++;
@@ -24,7 +30,7 @@ public class Student extends Person {
 	}
 
 	@Override
-	public void answerQuestion() {
+	public void askQuestion() {
 		String question = questions[questionNumber];
 		if (questionNumber < questions.length - 1) {
 			questionNumber++;

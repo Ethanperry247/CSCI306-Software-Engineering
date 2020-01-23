@@ -21,10 +21,12 @@ public class Party {
 	public Party() {
 		// Add your person objects here. The following are included as examples
 		people.add(new Teacher("Mr. Teacher", "Teacher", "Geometry"));
-		String[] responses = {"What's for dinner?", "When's the big exam?", "Will you go to prom with me?"};
-		String[] questions = {"I hate homework.", "I like pizza."};
-		people.add(new Student("Butterball", "Student", responses, questions));
-		people.add(new PetOwner("CatLady", "Yoga instructor", "Cat", "Esmerelda", responses, questions));
+		String[] studentResponses = {"I hate homework.", "I like pizza."};
+		String[] studentQuestions = {"What's for dinner?", "When's the big exam?", "Will you go to prom with me?"};
+		String[] petOwnerResponses = {"I love my pets!", "I only use purina.", "I'm going to walk my pet."};
+		String[] petOwnerQuestions = {"Do you like pets?", "Do you have a pet?", "Do you like yoga?"};
+		people.add(new Student("Butterball", "Student", studentResponses, studentQuestions));
+		people.add(new PetOwner("CatLady", "Yoga instructor", "Cat", "Esmerelda", petOwnerResponses, petOwnerQuestions));
 		}
 	
 	/**

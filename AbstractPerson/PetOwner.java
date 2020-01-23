@@ -16,7 +16,7 @@ public class PetOwner extends Person {
 	@Override
 	public void whatDoYouDo() {
 		super.whatDoYouDo();
-		String response = "\nMy pet's name is " + petName + ", and they are a " + petType + "!";
+		String response = "\nI have a " + petType + ", and their name is " + petName + "!";
 		System.out.println(response);
 	}
 	

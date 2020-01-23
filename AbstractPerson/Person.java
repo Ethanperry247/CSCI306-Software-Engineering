@@ -17,7 +17,7 @@ public abstract class Person {
 	}
 	
 	public void whatDoYouDo() {
-		System.out.println("I am a " + occupation + ".");
+		System.out.print("I am a " + occupation + ".");
 	}
 	
 	public abstract void askQuestion();
