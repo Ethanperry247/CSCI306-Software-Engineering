@@ -39,7 +39,9 @@ public class Burner {
 		default:
 			break;
 		}
-		timer += TIME_DURATION;
+		if (timer == 0) {
+			timer += TIME_DURATION;
+		}
 	}
 	
 	public void minusButton() {
@@ -56,7 +58,9 @@ public class Burner {
 		default:
 			break;
 		}
-		timer += TIME_DURATION;
+		if (timer == 0) {
+			timer += TIME_DURATION;
+		}
 	}
 	
 	public void updateTemperature() {
@@ -82,6 +86,22 @@ public class Burner {
 	}
 
 	public void display() {
-		System.out.println("[" + mySetting.toString() + "]....." + this.displayTemperature());
+		String tempStatus = "";
+		switch (this.getMyTemperature()) {
+			case COLD:
+				tempStatus = "cooool";
+				break;
+			case WARM:
+				tempStatus = "warm";
+				break;
+			case HOT:
+				tempStatus = "CAFEFUL";
+				break;
+			case BLAZING:
+				tempStatus = "VERY HOT! DON'T TOUCH";
+				break;
+		}
+		
+		System.out.println("[" + mySetting.toString() + "]....." + tempStatus);
 	}
 }

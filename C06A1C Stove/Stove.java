@@ -34,10 +34,16 @@ public class Stove {
 		burners.get(1).display();
 		burners.get(2).display();
 		burners.get(3).display();
-		if (burners.get(0).getMyTemperature() == Burner.Temperature.BLAZING ||
-			burners.get(1).getMyTemperature() == Burner.Temperature.BLAZING ||
-			burners.get(2).getMyTemperature() == Burner.Temperature.BLAZING ||
-			burners.get(3).getMyTemperature() == Burner.Temperature.BLAZING) {
+		
+		// Checks if any of the burners are blazing and sets a boolean so that an alert will be shown if so.
+		boolean burnerIsBlazing = false;
+		for (Burner burner: burners) {
+			if (burner.getMyTemperature() == Burner.Temperature.BLAZING) {
+				burnerIsBlazing = true;
+			}
+		}
+		
+		if (burnerIsBlazing) {
 			System.out.println("RED LIGHT - HOT BURNER ALERT");
 		}
 	}
@@ -101,7 +107,7 @@ public class Stove {
 		Stove stove = new Stove();
 		
 		System.out.println("Beginning stove state ");
-		// trun the burners up
+		// turn the burners up
 		stove.displayStove();
 		stove.turnBurnersUp();
 		stove.timePassing(6);
