@@ -1,3 +1,5 @@
+// Authors: Ethan Perry and Shania Jo RunningRabbit
+
 import java.util.ArrayList;
 
 /**
@@ -37,6 +39,7 @@ public class Stove {
 		
 		// Checks if any of the burners are blazing and sets a boolean so that an alert will be shown if so.
 		boolean burnerIsBlazing = false;
+		
 		for (Burner burner: burners) {
 			if (burner.getMyTemperature() == Burner.Temperature.BLAZING) {
 				burnerIsBlazing = true;

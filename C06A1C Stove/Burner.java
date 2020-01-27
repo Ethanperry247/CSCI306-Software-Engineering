@@ -1,3 +1,4 @@
+// Authors: Ethan Perry and Shania Jo RunningRabbit
 
 public class Burner {
 	// Can I make this public?
@@ -11,20 +12,7 @@ public class Burner {
 		return myTemperature;
 	}
 	
-	public String displayTemperature() {
-		switch (this.getMyTemperature()) {
-			case COLD:
-				return "cooool";
-			case WARM:
-				return "warm";
-			case HOT:
-				return "CAFEFUL";
-			case BLAZING:
-				return "VERY HOT! DON'T TOUCH";
-		}
-		return "";
-	}
-	
+	//Increases the burner setting by one.
 	public void plusButton() {
 		switch (mySetting) {
 			case MEDIUM:
@@ -36,14 +24,16 @@ public class Burner {
 			case OFF:
 				mySetting = Setting.LOW;
 				break;
-		default:
-			break;
+			default:
+				break;
 		}
+		
 		if (timer == 0) {
 			timer += TIME_DURATION;
 		}
 	}
 	
+	// Decreases the burner setting by one.
 	public void minusButton() {
 		switch (mySetting) {
 			case HIGH:
@@ -55,9 +45,10 @@ public class Burner {
 			case LOW:
 				mySetting = Setting.OFF;
 				break;
-		default:
-			break;
+			default:
+				break;
 		}
+		
 		if (timer == 0) {
 			timer += TIME_DURATION;
 		}
@@ -67,6 +58,8 @@ public class Burner {
 		if (timer != 0) {
 			timer--;
 		}
+		
+		// Updates temperature if the timer has hit zero.
 		if (timer == 0) {
 			switch (mySetting) {
 				case HIGH:
@@ -86,6 +79,7 @@ public class Burner {
 	}
 
 	public void display() {
+		// Generates a string describing the temperature of the stove to de displayed.
 		String tempStatus = "";
 		switch (this.getMyTemperature()) {
 			case COLD:
@@ -102,6 +96,7 @@ public class Burner {
 				break;
 		}
 		
+		// Prints both status and temperature indicators.
 		System.out.println("[" + mySetting.toString() + "]....." + tempStatus);
 	}
 }
