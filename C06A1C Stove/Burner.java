@@ -3,10 +3,16 @@
 public class Burner {
 	// Can I make this public?
 	public enum Temperature { BLAZING, HOT, WARM, COLD };
-	private Temperature myTemperature = Burner.Temperature.COLD;
-	private Setting mySetting = Setting.OFF;
-	private int timer = 0;
+	private Temperature myTemperature;
+	private Setting mySetting;
+	private int timer;
 	private static final int TIME_DURATION = 2;
+	
+	public Burner() {
+		myTemperature = Burner.Temperature.COLD;
+		mySetting = Setting.OFF;
+		timer = 0;
+	}
 	
 	public Temperature getMyTemperature() {
 		return myTemperature;
