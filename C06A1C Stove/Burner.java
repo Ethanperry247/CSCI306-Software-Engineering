@@ -1,13 +1,28 @@
 
 public class Burner {
-	private enum Temperature { BLAZING, HOT, WARM, COLD };
+	// Can I make this public?
+	public enum Temperature { BLAZING, HOT, WARM, COLD };
 	private Temperature myTemperature = Burner.Temperature.COLD;
-	private Setting mySetting = Setting.LOW;
+	private Setting mySetting = Setting.OFF;
 	private int timer = 0;
 	private static final int TIME_DURATION = 2;
 	
 	public Temperature getMyTemperature() {
 		return myTemperature;
+	}
+	
+	public String displayTemperature() {
+		switch (this.getMyTemperature()) {
+			case COLD:
+				return "cooool";
+			case WARM:
+				return "warm";
+			case HOT:
+				return "CAFEFUL";
+			case BLAZING:
+				return "VERY HOT! DON'T TOUCH";
+		}
+		return "";
 	}
 	
 	public void plusButton() {
@@ -21,6 +36,8 @@ public class Burner {
 			case OFF:
 				mySetting = Setting.LOW;
 				break;
+		default:
+			break;
 		}
 		timer += TIME_DURATION;
 	}
@@ -36,32 +53,35 @@ public class Burner {
 			case LOW:
 				mySetting = Setting.OFF;
 				break;
+		default:
+			break;
 		}
 		timer += TIME_DURATION;
 	}
 	
 	public void updateTemperature() {
+		if (timer != 0) {
+			timer--;
+		}
 		if (timer == 0) {
 			switch (mySetting) {
-			case HIGH:
-				myTemperature = Burner.Temperature.BLAZING;
-				break;
-			case MEDIUM:
-				myTemperature = Burner.Temperature.HOT;
-				break;
-			case LOW:
-				myTemperature = Burner.Temperature.WARM;
-				break;
-			case OFF:
-				myTemperature = Burner.Temperature.COLD;
-				break;
-		}
-		} else {
-			timer--;
+				case HIGH:
+					myTemperature = Burner.Temperature.BLAZING;
+					break;
+				case MEDIUM:
+					myTemperature = Burner.Temperature.HOT;
+					break;
+				case LOW:
+					myTemperature = Burner.Temperature.WARM;
+					break;
+				case OFF:
+					myTemperature = Burner.Temperature.COLD;
+					break;
+			}
 		}
 	}
 
 	public void display() {
-		System.out.println(mySetting.toString());
+		System.out.println("[" + mySetting.toString() + "]....." + this.displayTemperature());
 	}
 }
