@@ -30,7 +30,16 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-
+		boolean blazingBurner = false;
+		for (Burner burner : burners) {
+			burner.display();
+			if (burner.getMyTemperature().equals(Burner.Temperature.BLAZING)) {
+				blazingBurner = true;
+			}
+		}
+		if (blazingBurner) {
+			System.out.println("RED LIGHT - HOT BURNER ALERT");
+		}
 	}
 	
 	/**
@@ -92,7 +101,7 @@ public class Stove {
 		Stove stove = new Stove();
 		
 		System.out.println("Beginning stove state ");
-		// trun the burners up
+		// turn the burners up
 		stove.displayStove();
 		stove.turnBurnersUp();
 		stove.timePassing(6);
