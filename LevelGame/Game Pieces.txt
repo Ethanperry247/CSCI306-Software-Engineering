@@ -1,0 +1,16 @@
+Authors: Shania Jo RunningRabbit and Ethan Perry
+Notes: This file describes the pieces of our game.
+
+Interactive Pieces:
+- Chest 		(Adjacent Square Interaction) 	(Positive Interaction)
+- Pirate Captain 	(Adjacent Square Interaction) 	(Negative Interaction)
+- Pirate First Mate 	(Adjacent Square Interaction) 	(Negative Interaction)
+- Pirate Buccaneers 	(Distance Interaction)		(Negative Interaction)
+- Cannon 		(Distance Interaction) 		(Negative Interaction)
+
+Movable Pieces:
+- Pirate Privateer
+- Parrot
+
+Drawable Pieces:
+- Flag
