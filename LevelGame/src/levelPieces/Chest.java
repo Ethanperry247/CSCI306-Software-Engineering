@@ -16,8 +16,9 @@ public class Chest extends GamePiece implements Drawable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		if (playerLocation == this.getLocation()) {
+			return InteractionResult.ADVANCE;
+		} else return null;
 	}
 
 }

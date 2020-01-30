@@ -4,7 +4,7 @@ public class Flag implements Drawable {
 
 	@Override
 	public void draw() {
-		System.out.print("|~@~|");
+		System.out.print("~@~");
 	}
 
 }

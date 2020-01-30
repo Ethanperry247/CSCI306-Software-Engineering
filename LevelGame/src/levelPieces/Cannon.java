@@ -11,8 +11,9 @@ public class Cannon extends GamePiece implements Drawable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		if (Math.abs(playerLocation - this.getLocation()) <= 3) {
+			return InteractionResult.HIT;
+		} else return null;
 	}
 
 }
