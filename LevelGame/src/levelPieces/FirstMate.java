@@ -44,7 +44,9 @@ public class FirstMate extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		if (playerLocation == this.getLocation()) {
+		
+		// Hit the player if within two squares.
+		if (Math.abs(playerLocation - this.getLocation()) <= 2) {
 			return InteractionResult.HIT;
 		} else return null;
 	}

@@ -43,6 +43,7 @@ public class Captain extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
+		// Kill player if one the same square.
 		if (playerLocation == this.getLocation()) {
 			return InteractionResult.KILL;
 		} else return null;

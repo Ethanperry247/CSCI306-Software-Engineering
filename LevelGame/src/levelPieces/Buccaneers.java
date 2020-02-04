@@ -12,7 +12,8 @@ public class Buccaneers extends GamePiece implements Drawable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
+		
+		// Hit the player if on the same square.
 		if (playerLocation == this.getLocation()) {
 			return InteractionResult.HIT;
 		} else return null;

@@ -5,10 +5,10 @@ import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
-public class Parrot extends GamePiece implements Moveable {
+public class RollingBottle extends GamePiece implements Moveable {
 
-	public Parrot(int location) {
-		super('^', location);
+	public RollingBottle(int location) {
+		super('*', location);
 	}
 
 	@Override
@@ -35,14 +35,7 @@ public class Parrot extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		if (playerLocation == this.getLocation()) {
-			
-			// Remove game piece from the game board, as a point has been obtained from it.
-			pieces[this.getLocation()] = null;
-			
-			// Give the player a point.
-			return InteractionResult.GET_POINT;
-		} else return null;
+		return null;
 	}
 
 }

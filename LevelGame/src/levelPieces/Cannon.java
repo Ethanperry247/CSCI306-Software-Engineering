@@ -11,6 +11,8 @@ public class Cannon extends GamePiece implements Drawable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
+		
+		// Hit the player if within three squares.
 		if (Math.abs(playerLocation - this.getLocation()) <= 3) {
 			return InteractionResult.HIT;
 		} else return null;
