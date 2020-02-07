@@ -44,7 +44,7 @@ public class Privateer extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		return null;
+		return InteractionResult.NONE;
 	}
 
 }

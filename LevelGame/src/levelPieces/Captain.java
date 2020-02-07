@@ -46,7 +46,7 @@ public class Captain extends GamePiece implements Moveable {
 		// Kill player if one the same square.
 		if (playerLocation == this.getLocation()) {
 			return InteractionResult.KILL;
-		} else return null;
+		} else return InteractionResult.NONE;
 	}
 
 }

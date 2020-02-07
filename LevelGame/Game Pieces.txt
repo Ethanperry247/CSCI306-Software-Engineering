@@ -1,16 +1,17 @@
 Authors: Shania Jo RunningRabbit and Ethan Perry
 Notes: This file describes the pieces of our game.
 
-Interactive Pieces:
-- Chest 		(Adjacent Square Interaction) 	(Positive Interaction)
-- Pirate Captain 	(Adjacent Square Interaction) 	(Negative Interaction)
-- Pirate First Mate 	(Adjacent Square Interaction) 	(Negative Interaction)
-- Pirate Buccaneers 	(Distance Interaction)		(Negative Interaction)
-- Cannon 		(Distance Interaction) 		(Negative Interaction)
+Interactive Pieces (extends gamepiece, various interaction result):
+- Chest 		(Same Square Interaction) 	(Positive Interaction: ADVANCE)		(Movement: Stationary) -- Advances the player to the next round if the player lands on the chest.
+- Parrot	 	(Same Square Interaction) 	(Positive Interaction: GET_POINT)	(Movement: Random) -- Gives the player a point if on the same quare, then disappears from the board.
+- Pirate Captain 	(Same Square Interaction) 	(Negative Interaction: KILL)		(Movement: Towards Player) -- Follows the player and kills them if they are interacted with.
+- Pirate First Mate 	(Distance Interaction) 		(Negative Interaction: HIT)		(Movement: Towards Player) -- Follows the player and hits them if they are within two squares.
+- Pirate Buccaneers 	(Same Square Interaction)	(Negative Interaction: HIT)		(Movement: Stationary) -- Hits the player if the player lands on their square.
+- Cannon 		(Distance Interaction) 		(Negative Interaction: HIT)		(Movement: Stationary) -- Shoots a cannonball at the player and hits them if within three squares.
 
-Movable Pieces:
-- Pirate Privateer
-- Parrot
+Movable Pieces (extends gamepiece, implements movable):
+- Pirate Privateer	(Movement: Towards Player) -- Will move towards the player and block the movement of other pieces.
+- Rolling Bottle	(Movement: Random) -- Will move randomly and block the movement of other pieces.
 
-Drawable Pieces:
+Drawable Pieces (implements drawable):
 - Flag

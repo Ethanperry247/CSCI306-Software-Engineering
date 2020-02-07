@@ -20,7 +20,7 @@ public class Parrot extends GamePiece implements Moveable {
 		// Check to make sure that the piece does not move out put range of the game board.
 		// Also checks to affirm that the character doesn't overwrite itself by moving a random length of 0.
 		// Finally checks to be sure that it is moving to an empty spot.
-		if (this.getLocation() + randomMovement < GameEngine.BOARD_SIZE - 1 && this.getLocation() + randomMovement > 0 &&
+		if (this.getLocation() + randomMovement < GameEngine.BOARD_SIZE - 1 && this.getLocation() + randomMovement >= 0 &&
 			gameBoard[this.getLocation() + randomMovement] == null && playerLocation != this.getLocation() + randomMovement &&
 			randomMovement != 0) {
 			
@@ -42,7 +42,7 @@ public class Parrot extends GamePiece implements Moveable {
 			
 			// Give the player a point.
 			return InteractionResult.GET_POINT;
-		} else return null;
+		} else return InteractionResult.NONE;
 	}
 
 }

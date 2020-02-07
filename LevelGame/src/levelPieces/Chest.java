@@ -20,7 +20,7 @@ public class Chest extends GamePiece implements Drawable {
 		// Advance the player if one the same square.
 		if (playerLocation == this.getLocation()) {
 			return InteractionResult.ADVANCE;
-		} else return null;
+		} else return InteractionResult.NONE;
 	}
 
 }
