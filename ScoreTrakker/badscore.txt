@@ -2,14 +2,8 @@ Student Score List
 Anite Bryant
 42
 Student1 student1
-53
+z
 Student2 student2
-77
+2000
 Student3 Student3
 981
-Lala land
-77
-The Guy
-987
-A firstletter
-28

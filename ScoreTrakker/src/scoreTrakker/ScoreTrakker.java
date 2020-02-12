@@ -7,50 +7,64 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class ScoreTrakker {
-	
-	private ArrayList<Student> studentList; 
+
+	private ArrayList<Student> studentList;
+	private String[] files = { "scores.txt", "badscore.txt", "nofile.txt" };
 
 	public ScoreTrakker() {
 		studentList = new ArrayList<Student>();
 	}
-	
-	public void loadDataFromFile(String fileName) {
-		try {
-			FileReader file = new FileReader(fileName);
-			Scanner scanner = new Scanner(file);
-			
-			
-			while (scanner.hasNextLine()) {
-				scanner.nextLine();
-				String name = scanner.nextLine();
-				int score = scanner.nextInt();
-				
+
+	public void loadDataFromFile(String fileName) throws FileNotFoundException {
+		String name = "";
+		String line = "";
+		FileReader file = new FileReader(fileName);
+		Scanner scanner = new Scanner(file);
+
+		while (scanner.hasNextLine()) {
+			scanner.nextLine();
+			name = scanner.nextLine();
+			line = scanner.next();
+
+			try {
+				int score = Integer.parseInt(line);
 				Student student = new Student(name, score);
 				studentList.add(student);
+
+			} catch (NumberFormatException e) {
+				System.out.println();
+				System.out.println("Incorrect format for [" + name + "] not a valid score: " + line);
+				System.out.println();
 			}
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		}
+
 	}
-	
+
 	public void printInOrder() {
-		// Collections.sort(this.studentList);
-		for (Student student: studentList) {
+		Collections.sort(studentList);
+		for (Student student : studentList) {
 			System.out.println(student);
 		}
 	}
-	
+
 	public void processFiles() {
-		loadDataFromFile("scores.txt");
-		printInOrder();
+		for (String file : files) {
+			try {
+				loadDataFromFile(file);
+				printInOrder();
+				studentList = new ArrayList<Student>();
+			} catch (FileNotFoundException e) {
+				System.out.println();
+				System.out.println("Can't find file: " + file);
+			}
+		}
 	}
-	
+
 	public static void main(String[] args) {
-		
+
 		ScoreTrakker scoreTrakker = new ScoreTrakker();
 		scoreTrakker.processFiles();
-		
+
 	}
 
 }

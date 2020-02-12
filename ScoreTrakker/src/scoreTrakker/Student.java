@@ -9,19 +9,19 @@ public class Student implements Comparable<Student> {
 		this.name = name;
 		this.score = score;
 	}
-	
-	
-
-	public int getScore() {
-		return score;
-	}
 
 
 	@Override
 	public int compareTo(Student o) {
-		if (this.getScore() > o.getScore()) {
-			return 1;
-		} else return 0;
+//		if (score > o.score) {
+//			return 1;
+//		} else if (score > o.score) {
+//			return -1;
+//		} else return 0;
+//		
+//		return name.compareTo(o.name);
+		
+		return (int) Math.round((score-o.score)*10);
 	}
 
 	@Override
