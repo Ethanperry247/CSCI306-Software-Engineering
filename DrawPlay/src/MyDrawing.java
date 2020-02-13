@@ -1,8 +1,6 @@
 import java.awt.Graphics;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 
 public class MyDrawing extends JPanel {
 	private Cat cat;
@@ -22,15 +20,17 @@ public class MyDrawing extends JPanel {
 	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
+
 		// Create a JPanel (MyDrawing), we'll draw on this
 		frame.setContentPane(new MyDrawing());
+
 		// Program will end when the window is closed
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		// Set the size (otherwise only title bar displays)
-		frame.setSize(400, 400);
+		frame.setSize(450, 450);
 		
 		// Frame will not display until you set visible true
 		frame.setVisible(true);
 	}
-
 }
