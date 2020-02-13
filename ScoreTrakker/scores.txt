@@ -1,15 +1,15 @@
 Student Score List
 Anite Bryant
 42
-Student1 student1
+Ethan Perry
 53
-Student2 student2
+Shania Jo RunningRabbit
 77
-Student3 Student3
+Alex Proud
 981
-Lala land
+Lala Land
 77
-The Guy
+Juston Divita
 987
-A firstletter
+Lilian Lastinger
 28
