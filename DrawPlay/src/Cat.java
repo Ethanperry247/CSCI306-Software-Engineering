@@ -33,17 +33,17 @@ public class Cat {
 		g2.setColor(Color.getHSBColor(354, 1.0f, 0.5f));
 		x = catX + EYE_X + 25; // Shift the eyes rightward.
 		y = catY + EYE_Y;
-		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		g2.fillOval(x, y, EYE_WIDTH*2, EYE_HEIGHT);
 		x += EYE_SEPARATION*2; // Double the eye seperation.
-		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		g2.fillOval(x, y, EYE_WIDTH*2, EYE_HEIGHT*4);
 		// Draw the mouth
 		g2.setColor(Color.pink);
 		x = catX + MOUTH_X;
 		y = catY + MOUTH_Y;
-		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
+		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT*6);
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow, I am a cat with big eyes.", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow, I am a cat with big eyes. Now I have become abstract art.", catX, catY+HEAD_DIMENSION+10);	
 	}
 }
