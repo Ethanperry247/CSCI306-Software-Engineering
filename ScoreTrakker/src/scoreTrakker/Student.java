@@ -13,15 +13,12 @@ public class Student implements Comparable<Student> {
 
 	@Override
 	public int compareTo(Student o) {
-//		if (score > o.score) {
-//			return 1;
-//		} else if (score > o.score) {
-//			return -1;
-//		} else return 0;
-//		
-//		return name.compareTo(o.name);
 		
-		return (int) Math.round((score-o.score)*10);
+		// If you desire to sort by name:
+		// return name.compareTo(o.name);
+		
+		// Or sort by score:
+		return (int)Math.round((score-o.score)*10);
 	}
 
 	@Override
