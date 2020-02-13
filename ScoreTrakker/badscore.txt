@@ -1,9 +1,9 @@
 Student Score List
 Anite Bryant
 42
-Student1 student1
-z
-Student2 student2
+Jake Zooni
+zdz
+Arnold Tennant
 2000
-Student3 Student3
+Michael LeBron
 981
